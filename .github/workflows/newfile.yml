@@ -3,10 +3,16 @@ on: workflow_dispatch
 jobs:
     newjob:
         runs-on: ubuntu-latest
+        # steps:
+        #     - name: hello
+        #       run: |
+        #         echo "hello world"
+        #         echo "halo"
         steps:
             - name: hello
-              run: |
-                echo "hello world"
-                echo "halo"
+              uses: actions/checkout@v3
+            - name: data
+              run: ls -l
+            
             
 
